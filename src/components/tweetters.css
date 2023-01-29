@@ -1,0 +1,11 @@
+.tweets {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1 0 70vh;
+  border: 2px solid var(--tweets-component-color);
+  overflow-y: scroll;
+
+  width: 400px;
+  border: 1px solid black;
+}
