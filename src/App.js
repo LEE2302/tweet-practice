@@ -7,12 +7,17 @@ import Form from "./components/form";
 
 function App() {
   const dummy = dummyDate;
-  console.log(dummy);
+
   const [button, setButton] = useState(dummy);
   console.log(button);
+
+  const tweetPlus = (tweet) => {
+    setButton([...button, tweet]);
+  };
+
   return (
     <div className="a">
-      <Form button={button} setButton={setButton} />
+      <Form tweetSum={tweetPlus} />
       <Tweetters tweet={button} />
     </div>
   );

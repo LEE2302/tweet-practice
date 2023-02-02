@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import dummyDate from "../date/date";
 import Tweetters from "./tweetters";
 
-function Form({ button, setButton }) {
+function Form({ tweetSum }) {
   const [username, setUsername] = useState("");
   const [content, setContent] = useState("");
 
@@ -18,15 +18,14 @@ function Form({ button, setButton }) {
     event.preventDefault();
 
     const tweet = {
-      id: button.length + 1,
+      id: tweetSum.length + 1,
       icon: "🐷",
       username: username,
       date: new Date().toISOString(),
       content: content,
     };
 
-    setButton([...button, tweet]);
-    console.log(button);
+    tweetSum(tweet);
     setUsername("");
     setContent("");
   }

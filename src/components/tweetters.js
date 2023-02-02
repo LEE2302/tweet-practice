@@ -2,13 +2,11 @@ import Tweet from "./tweet";
 import "./tweetters.css";
 
 function Tweetters({ tweet }) {
-  console.log(tweet);
-
   return (
     <ul className="tweets">
-      {tweet.map((el) => (
+      {tweet.map((el, idx) => (
         <Tweet
-          key={el.id}
+          key={idx}
           title={el.content}
           username={el.username}
           date={el.date}
